@@ -13,7 +13,6 @@ $('.toggle_staff_volume_off').click(function () {
 
 });
 </script>
-
 <div class="list_page_flex">
 <div class="list_page_flex_right">
   <div class="list_staff_scroll_header"><p><span class="staff_number"></span>人のスタッフが出勤中</p>
