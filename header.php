@@ -41,7 +41,6 @@ $('.staff_number').html(li_cnt);
 
 <body>
 
-<?php include('./modal_device_setting.php'); ?>
 
 
   <div class="container">
@@ -68,10 +67,13 @@ $('.staff_number').html(li_cnt);
     <div class="header_error_text">
     <img class="desvg" src="icon/error-01.svg" alt="">
     <p>サーバーに問題が発生しています</p></div>
+    <div>
   <button class="icon_text simple_hover header_right_component">
 <img class="desvg" src="icon/setting.svg" alt="">
 <p>デバイス設定</p>
 </button>
+<?php include('./modal_device_setting.php'); ?>
+</div>
 
 
 <button class="staff_name simple_hover header_right_component">
