@@ -1,4 +1,3 @@
-<div class="modal_ovarlay"></div>
 
 
 <div class="ds_box_2 modal_device_setting">
