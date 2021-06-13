@@ -1548,7 +1548,7 @@ modal
   z-index: 5;
   position: absolute;
   right: 10px;
-  top: 55px;
+  top: 100%;
   padding: 30px;
 }
 
@@ -1614,4 +1614,8 @@ modal
 
 .modal_setting_border_box_content {
   display: block;
+}
+
+.device_setting_btn {
+  position: relative;
 }
