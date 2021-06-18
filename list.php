@@ -508,7 +508,8 @@ $(function() {
     <div class="content_scroll_inner">
         <div class="store_list">
 
-            <div class="store_list_box flex_col_3 ds_box_1 hover_border shop_list_enabled">
+            <div class="store_list_box flex_col_3 ds_box_1 hover_border">
+                <div class="shop_list_enabled"></div>
                 <div class="ds_box_inner">
                     <div class="store_list_video_box">
                         <div class="store_list_video_box_inner">
@@ -531,7 +532,10 @@ $(function() {
                             </div>
                             </div>
                             </div>
-                            <div class="store_list_info_setting">
+                        </div>
+                    </div>
+                </div>
+                                 <div class="store_list_info_setting">
                                 <div class="simple_hover icon_btn store_list_info_volume">
                                 <img class="desvg" src="icon/volume_high.svg" alt="">
                                 </div>
@@ -559,12 +563,10 @@ $(function() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
-            <div class="store_list_box flex_col_3 ds_box_1 hover_border shop_list_enabled">
+            <div class="store_list_box flex_col_3 ds_box_1 hover_border ">
+                                <div class="shop_list_enabled"></div>
                 <div class="ds_box_inner">
                     <div class="store_list_video_box">
                         <div class="store_list_video_box_inner">
@@ -820,7 +822,9 @@ $(function() {
             </div>
 
 
-            <div class="store_list_box flex_col_3 ds_box_1 hover_border shop_list_detection shop_list_enabled">
+            <div class="store_list_box flex_col_3 ds_box_1 hover_border shop_list_detection">
+                                <div class="shop_list_enabled"></div>
+
                 <div class="ds_box_inner">
                     <div class="store_status_box">
                         <div class="store_detection_icon_flex">
@@ -887,7 +891,9 @@ $(function() {
             </div>
 
 
-            <div class="store_list_box flex_col_3 ds_box_1 hover_border shop_list_detection shop_list_enabled">
+            <div class="store_list_box flex_col_3 ds_box_1 hover_border shop_list_detection">
+                                <div class="shop_list_enabled"></div>
+
                 <div class="ds_box_inner">
                     <div class="store_status_box">
                         <div class="store_detection_icon_flex">
@@ -954,7 +960,9 @@ $(function() {
             </div>
 
 
-            <div class="store_list_box flex_col_3 ds_box_1 hover_border shop_list_detection shop_list_enabled">
+            <div class="store_list_box flex_col_3 ds_box_1 hover_border shop_list_detection">
+                                <div class="shop_list_enabled"></div>
+
                 <div class="ds_box_inner">
                     <div class="store_status_box">
                         <div class="store_detection_icon_flex">

@@ -1,13 +1,13 @@
 
 
-<div class="ds_box_2 modal_device_setting">
+<div class="ds_box_2 modal_device_setting modal_content">
     <button class="modal_close_btn"><img class="desvg" src="icon/close.svg" alt=""></button>
   <div class="icon_text modal_setting_tilte">
 <img class="desvg" src="icon/setting.svg" alt="">
 <p>デバイス設定</p>
 </div>
 
-<div class="modal_setting_content">
+<div class="modal_setting_content_flex">
 
 <div class="modal_device_setting_left">
 
@@ -19,18 +19,7 @@
 <div class="setting_preview_display"></div>
 </div>
 
-<script>
-        $(function() {
 
-    var setting_preview_display_height = $('.setting_preview_display').innerHeight();
-
-    $('.modal_device_setting_left_photo_scroll').css('height',setting_preview_display_height);
-
-                $(window).resize(function(){
-
-                });
-        });
-</script>
 <div class="modal_device_setting_left_photo">
 
   <div class="icon_text modal_headline">
@@ -41,41 +30,50 @@
                 <div class="content_scroll operation_scroll_box_content_scroll modal_device_setting_left_photo_scroll">
                     <div class="operation_scroll_box_content_scroll_inner">
                         <ul class="operation_list_pannel">
-                            <li class="photo_movie">
-                            <div class="operation_list_pannel_img_43">
-                                <img src="./img/pannel_img_1.png" alt="">
+                            <li class="bg_color_select">
+                            <div class="operation_list_pannel_color">
                             </div>
                             </li>
-                            <li class="photo_movie">
-                            <div class="operation_list_pannel_img_43">
-                                <img src="./img/pannel_img_2.png" alt="">
+                            <li class="bg_color_select">
+                            <div class="operation_list_pannel_color">
                             </div>
                             </li>
-                            <li class="photo_movie">
-                            <div class="operation_list_pannel_img_43">
-                                <img src="./img/pannel_img_3.png" alt="">
+                            <li class="bg_color_select">
+                            <div class="operation_list_pannel_color">
                             </div>
                             </li>
 
-                            <li class="photo_movie">
-                            <div class="operation_list_pannel_img_43">
-                                <img src="./img/pannel_img_5.png" alt="">
+                            <li class="bg_color_select">
+                            <div class="operation_list_pannel_color">
                             </div>
                             </li>
-                            <li class="photo_movie">
-                            <div class="operation_list_pannel_img_43">
-                                <img src="./img/pannel_img_6.png" alt="">
+                            <li class="bg_color_select">
+                            <div class="operation_list_pannel_color">
                             </div>
                             </li>
 
-                            <li class="photo_movie">
-                            <div class="operation_list_pannel_img_43">
-                                <img src="./img/pannel_img_8.png" alt="">
+                            <li class="bg_color_select">
+                            <div class="operation_list_pannel_color">
                             </div>
                             </li>
-                            <li class="photo_movie">
-                            <div class="operation_list_pannel_img_43">
-                                <img src="./img/pannel_img_9.png" alt="">
+                            <li class="bg_color_select">
+                            <div class="operation_list_pannel_color">
+                            </div>
+                            </li>
+                            <li class="bg_color_select">
+                            <div class="operation_list_pannel_color">
+                            </div>
+                            </li>
+                            <li class="bg_color_select">
+                            <div class="operation_list_pannel_color">
+                            </div>
+                            </li>
+                            <li class="bg_color_select">
+                            <div class="operation_list_pannel_color">
+                            </div>
+                            </li>
+                            <li class="bg_color_select">
+                            <div class="operation_list_pannel_color">
                             </div>
                             </li>
                         </ul>
@@ -107,7 +105,7 @@
 <p>入力レベル</p>
 </div>
 <div class="modal_setting_border_box_content">
-<button class="btn btn_small btn_border"><img class="desvg" src="icon/volume_high.svg" alt="">
+<button class="btn btn_small btn_border btn_play_test"><img class="desvg" src="icon/volume_high.svg" alt="">
 テスト開始</button>
 </div>
 </div>
@@ -118,7 +116,7 @@
 <p>録音テスト</p>
 </div>
 <div class="modal_setting_border_box_content">
-<button class="btn btn_small btn_border"><img class="desvg" src="icon/play.svg" alt="">
+<button class="btn btn_small btn_border btn_play_recording"><img class="desvg" src="icon/play.svg" alt="">
 録音開始</button>
 <p class="small">※録音した音声は保存されません</p>
 </div>
