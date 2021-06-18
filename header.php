@@ -12,25 +12,101 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/desvg@1.0.2/desvg.min.js"></script>
 <script>
-window.addEventListener('load', function(){
-  deSVG('.desvg', true);
-});
+
 
 $(function() {
 
+var header_btn_other_witdh = $('.header_btn_other').innerWidth();
+var header_device_setting_btn_right = header_btn_other_witdh + 20;
+$('.header_device_setting_btn').css('right',header_device_setting_btn_right)
+
+
 $('select[name=page_link]').change(function() {
-    if ($(this).val() != '') {
-      window.location.href = $(this).val();
-    }
-  });
+if ($(this).val() != '') {
+window.location.href = $(this).val();
+}
+});
 
 $('.shop_list_enabled').click(function(){
-  window.location.href = 'room.php';
+window.location.href = 'room.php';
 });
 
 var li_cnt = $("ul.list_staff li").length;
 console.log(li_cnt);
 $('.staff_number').html(li_cnt);
+
+$('.btn_device_setting').click(function(){
+  $('.modal_device_setting').fadeIn(150);
+  $('.modal_ovarlay').fadeIn(150);
+  var setting_preview_display_height = $('.setting_preview_display').innerHeight();
+console.log(setting_preview_display_height);
+$('.modal_device_setting_left_photo_scroll').css('height',setting_preview_display_height);
+
+});
+$('.modal_close_btn').click(function(){
+  $('.modal_device_setting').fadeOut(150);
+  $('.modal_ovarlay').fadeOut(150);
+});
+$('.modal_ovarlay').click(function(){
+  $('.modal_device_setting').fadeOut(150);
+  $('.modal_ovarlay').fadeOut(150);
+});
+
+$('.btn_user_setting').click(function(){
+  $('.modal_user_setting').fadeIn(150);
+  $('.modal_ovarlay_2').fadeIn(150);
+});
+$('.modal_close_btn').click(function(){
+  $('.modal_user_setting').fadeOut(150);
+  $('.modal_ovarlay_2').fadeOut(150);
+});
+$('.modal_ovarlay_2').click(function(){
+  $('.modal_user_setting').fadeOut(150);
+  $('.modal_ovarlay_2').fadeOut(150);
+});
+
+
+$('.bg_color_select').click(function(){
+$(this).addClass("active");
+$(".bg_color_select").not(this).removeClass("active");
+});
+
+
+
+  $('.btn_play_recording').click(function(){
+    $(this).toggleClass("btn_stop");
+		if($(this).hasClass('btn_stop') == false){
+    $(this).html('<img class="desvg" src="icon/play.svg">録音開始');
+          deSVG('.desvg', true);
+		}else{
+    $(this).html('<img class="desvg" src="icon/stop.svg">録音終了');
+      deSVG('.desvg', true);
+		}
+	});
+  $('.btn_play_test').click(function(){
+    $(this).toggleClass("btn_stop");
+		if($(this).hasClass('btn_stop') == false){
+        $(this).html('<img class="desvg" src="icon/volume_high.svg">テスト開始');
+          deSVG('.desvg', true);
+		}else{
+    $(this).html('<img class="desvg" src="icon/stop.svg">テスト終了');
+      deSVG('.desvg', true);
+		}
+	});
+
+
+
+
+$(window).resize(function(){
+var setting_preview_display_height = $('.setting_preview_display').innerHeight();
+console.log(setting_preview_display_height);
+$('.modal_device_setting_left_photo_scroll').css('height',setting_preview_display_height);
+});
+
+window.addEventListener('load', function(){
+  deSVG('.desvg', true);
+});
+
 });
 
 
@@ -41,7 +117,7 @@ $('.staff_number').html(li_cnt);
 
 <body>
 
-<div class="modal_ovarlay"></div>
+
 
 
   <div class="container">
@@ -64,12 +140,26 @@ $('.staff_number').html(li_cnt);
   </div>
 
 
-  <div class="header_right_content">
-    <div class="header_error_text">
-    <img class="desvg" src="icon/error-01.svg" alt="">
-    <p>サーバーに問題が発生しています</p></div>
-    <div class="device_setting_btn">
-  <button class="icon_text simple_hover header_right_component">
+
+
+
+
+<div class="header_user_btn">
+  <div class="modal_ovarlay modal_ovarlay_2"></div>
+<button class="staff_name simple_hover btn_user_setting">
+<img class="staff_name_img" src="img/dog.png" alt="">
+<p>デモスタッフ</p>
+</button>
+<?php include('./modal_user_setting.php'); ?>
+</div>
+
+
+<div class="header_device_setting_btn">
+<div class="header_error_text">
+<img class="desvg" src="icon/error-01.svg" alt="">
+<p>サーバーに問題が発生しています</p></div>
+  <div class="modal_ovarlay"></div>
+<button class="icon_text simple_hover btn_device_setting">
 <img class="desvg" src="icon/setting.svg" alt="">
 <p>デバイス設定</p>
 </button>
@@ -77,11 +167,7 @@ $('.staff_number').html(li_cnt);
 </div>
 
 
-<button class="staff_name simple_hover header_right_component">
-<img class="staff_name_img" src="img/dog.png" alt="">
-<p>デモスタッフ</p>
-</button>
-  </div>
+
 
 
   </header>

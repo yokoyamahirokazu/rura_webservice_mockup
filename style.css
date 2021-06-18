@@ -48,6 +48,8 @@
   --primary-op-15: rgba(0, 160, 233, 0.3);
 
   --text-color: #37352f;
+
+  --modal-overlay-color: rgba(0,0,0,0.2);
 }
 /* A Modern CSS Reset */
 
@@ -296,6 +298,16 @@ component
   border: solid 2px var(--primary-500);
 }
 
+.shop_list_enabled{
+  position:absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  content: " ";
+  z-index: 2;
+}
+
 .staff_name {
   margin: 0;
   display: inline-flex;
@@ -493,6 +505,46 @@ component
   background-color: var(--primary-900);
 }
 
+.btn_stop{
+    background-color: var(--error-500);
+    border: solid 2px var(--error-500);
+    color: #fff;
+}
+
+.btn_stop .desvg path {
+  fill: #fff;
+}
+
+.btn_stop {
+  background-color: var(--error-500);
+      border: solid 2px var(--error-500);
+      color: #fff;
+
+}
+
+.btn_stop:hover {
+  background-color: var(--error-700);
+      border: solid 2px var(--error-700);
+      color: #fff;
+
+}
+
+.btn_stop:active {
+  background-color: var(--error-900);
+      border: solid 2px var(--error-900);
+      color: #fff;
+
+}
+
+.desvg.primary_color{
+  color: var(--primary-500);
+}
+.desvg.primary_color path{
+  fill: var(--primary-500);
+  color: var(--primary-500);
+}
+
+
 /* ---------------
 container
 ----------------- */
@@ -539,14 +591,11 @@ header
   position: absolute;
   right: 15px;
   top: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-end;
   transform: translate(0, -50%);
 }
 
 .header_right_component {
-  margin: 0 0 0 10px;
+  margin: 0 0 0 0;
 }
 
 .header_left_content {
@@ -565,6 +614,7 @@ header
   margin: 0 20px 0 0;
 }
 
+
 .header_error_text {
   font-size: 12px;
   calor: var(--error-500);
@@ -573,8 +623,9 @@ header
   border-radius: 13px;
   border: solid 1px var(--error-500);
   padding: 0 10px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  margin: 0 15px 0 0;
 }
 
 .header_error_text p {
@@ -627,6 +678,7 @@ list page
 .store_list_box {
   margin: 8px;
   min-width: 310px;
+  position: relative;
 }
 
 .flex_col_3 {
@@ -714,7 +766,7 @@ list page
 .store_list_info_setting {
   position: absolute;
   right: 10px;
-  top: 50%;
+  bottom: 0;
   transform: translate(0, -50%);
   display: flex;
   justify-content: flex-end;
@@ -1466,6 +1518,20 @@ ul.operation_list_pannel li:active {
   content: " ";
 }
 
+.operation_list_pannel_color{
+  width: 100%;
+  position: relative;
+  margin: 0;
+  background-color: #999;
+}
+
+.operation_list_pannel_color::before {
+  padding: 66.6666% 0 0 0;
+  display: block;
+  content: " ";
+}
+
+
 .operation_list_pannel_img_43 img {
   width: 100%;
   height: 100%;
@@ -1519,13 +1585,31 @@ ul.operation_list_pannel li.speach p {
 modal
 ----------------- */
 
+
+.header_device_setting_btn{
+  position: fixed;
+  right: 140px;
+  top: 9px;
+    text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header_user_btn{
+  position: fixed;
+  right: 15px;
+  top: 9px;
+}
+
 .modal_ovarlay {
   position: fixed;
+  z-index: 4;
   width: 100vw;
   height: 100vh;
-  z-index: 4;
-  top: 0;
   left: 0;
+  top:0;
+  display: none;
 }
 
 .modal_close_btn {
@@ -1546,16 +1630,37 @@ modal
 .modal_device_setting {
   display: inline-block;
   z-index: 5;
-  position: absolute;
+  position: fixed;
   right: 10px;
-  top: 100%;
+  top: 55px;
   padding: 30px;
+  display: none;
 }
+
+.modal_user_setting {
+  display: inline-block;
+  z-index: 6;
+  position: fixed;
+  right: 10px;
+  top: 55px;
+  padding: 20px;
+    display: none;
+}
+
+.modal_user_setting_content{
+  display: block;
+  margin: 10px 0 0;
+}
+.modal_user_setting_content:first-child{
+  margin: 0;
+}
+
+
 
 .modal_setting_tilte {
   border-bottom: solid 1px var(--dark-100);
   padding: 0 0 10px 0;
-  margin: 0 0 10px 0;
+  margin: 0 0 20px 0;
   width: 100%;
 }
 .modal_setting_tilte p {
@@ -1571,8 +1676,14 @@ modal
 .modal_setting_content {
   margin: 0;
   padding: 0;
+}
+
+.modal_setting_content_flex {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: nowrap;
+  text-align: left;
 }
 
 .modal_device_setting_left {
@@ -1587,7 +1698,8 @@ modal
 
 .modal_device_setting_left_preview {
   margin: 0 20px 0 0;
-  width: 100%;
+  width: 50vw;
+  max-width: 820px;
   min-width: 540px;
 }
 
@@ -1607,15 +1719,29 @@ modal
 }
 
 .modal_setting_border_box {
-  padding: 0 0 20px 0;
-  margin: 0 0 20px 0;
-  border-bottom: solid 1px var(--dark-100);
+  padding: 15px 0 0;
+  margin: 15px 0 0;
+  border-top: solid 1px var(--dark-100);
+}
+
+.modal_setting_border_box:first-child{
+  margin: 0;
+  padding: 0;
+  border-top: none;
 }
 
 .modal_setting_border_box_content {
   display: block;
 }
 
+.modal_setting_border_box_content p{
+  margin: 10px 0;
+}
+
 .device_setting_btn {
-  position: relative;
+  overflow: visible;
+}
+
+.modal_device_setting_left_photo_scroll {
+  min-width: 120px;
 }
