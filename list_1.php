@@ -9,13 +9,22 @@ $('.store_list_setting').click(function () {
 $('.toggle_staff_volume_off').click(function () {
     $(this).toggleClass('toggle_staff_volume_on');
   });
-
+$('.btn_list_page_right_mini_close').click(function () {
+    $('.list_page_flex').addClass('list_page_flex_right_mini');
+  });
+$('.btn_list_page_right_mini_open').click(function () {
+    $('.list_page_flex').removeClass('list_page_flex_right_mini');
+  });
 
 });
 </script>
 <div class="list_page_flex">
 <div class="list_page_flex_right">
-  <div class="list_staff_scroll_header"><p><span class="staff_number"></span>人のスタッフが出勤中</p>
+    <div class="list_staff_scroll_header"><p><span class="staff_number"></span>人のスタッフが出勤中</p>
+    <div class="btn_list_page_right_mini btn_list_page_right_mini_open simple_hover"><img class="desvg" src="icon/arrow_double_left.svg" alt="">
+</div>
+    <div class="btn_list_page_right_mini btn_list_page_right_mini_close simple_hover"><img class="desvg" src="icon/arrow_double_right.svg" alt="">
+</div>
 </div>
 <div class="content_scroll list_staff_scroll">
 <div class="content_scroll_inner list_staff_scroll_inner">
