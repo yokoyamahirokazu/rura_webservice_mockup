@@ -158,6 +158,11 @@ window.addEventListener('load', function(){
 <div class="header_error_text">
 <img class="desvg" src="icon/error-01.svg" alt="">
 <p>サーバーに問題が発生しています</p></div>
+
+<button class="icon_text simple_hover btn_help icon_alert">
+<img class="desvg" src="icon/help.svg" alt="">
+</button>
+
   <div class="modal_ovarlay"></div>
 <button class="icon_text simple_hover btn_device_setting">
 <img class="desvg" src="icon/setting.svg" alt="">
