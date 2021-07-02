@@ -1,23 +1,6 @@
 <?php include('./header.php'); ?>
 
-<script>
-$(function() {
-$('.store_list_setting').click(function () {
-    $(this).next('.store_list_setting_modal').toggleClass('setting_modal_open');
-  });
 
-$('.toggle_staff_volume_off').click(function () {
-    $(this).toggleClass('toggle_staff_volume_on');
-  });
-$('.btn_list_page_right_mini_close').click(function () {
-    $('.list_page_flex').addClass('list_page_flex_right_mini');
-  });
-$('.btn_list_page_right_mini_open').click(function () {
-    $('.list_page_flex').removeClass('list_page_flex_right_mini');
-  });
-
-});
-</script>
 <div class="list_page_flex">
 <div class="list_page_flex_right">
     <div class="list_staff_scroll_header"><p><span class="staff_number"></span>人のスタッフが出勤中</p>
@@ -133,86 +116,6 @@ $('.btn_list_page_right_mini_open').click(function () {
 
 </div>
 
-<script>
-$(function() {
-  var w = $('.list_page_flex_left').innerWidth();
-  var cnt = $(".store_list_box").length;
-  console.log(cnt);
-
-  if (cnt <= 1) {
-    $('.store_list_box').css('width', 'calc(100% - 16px)');
-
-  }
-  else if (cnt <= 2) {
-    $('.store_list_box').css('width', 'calc(50% - 16px)');
-    if (w < 684) {
-      $('.store_list_box').css('width', 'calc(100% - 16px)');
-    }
-  }
-  else if (cnt <= 3) {
-      $('.store_list_box').css('width', 'calc(33.3333% - 16px)');
-      if (w < 1026) {
-        $('.store_list_box').css('width', 'calc(50% - 16px)');
-      }
-      if (w < 684) {
-        $('.store_list_box').css('width', 'calc(100% - 16px)');
-      }
-    }
-  else {
-
-    if (w < 1368) {
-      $('.store_list_box').css('width', 'calc(33.33333% - 16px)');
-    }
-    if (w < 1026) {
-      $('.store_list_box').css('width', 'calc(50% - 16px)');
-    }
-    if (w < 684) {
-      $('.store_list_box').css('width', 'calc(100% - 16px)');
-    }
-  }
-
-  $(window).resize(function(){
-    var w = $('.list_page_flex_left').innerWidth();
-
-    if (cnt <= 1) {
-      $('.store_list_box').css('width', 'calc(100% - 16px)');
-
-    }
-    else if (cnt <= 2) {
-      $('.store_list_box').css('width', 'calc(50% - 16px)');
-      if (w < 684) {
-        $('.store_list_box').css('width', 'calc(100% - 16px)');
-      }
-    }
-    else if (cnt <= 3) {
-        $('.store_list_box').css('width', 'calc(33.3333% - 16px)');
-        if (w < 1026) {
-          $('.store_list_box').css('width', 'calc(50% - 16px)');
-        }
-        if (w < 684) {
-          $('.store_list_box').css('width', 'calc(100% - 16px)');
-        }
-      }
-      else {
-      if (w > 1368) {
-        $('.store_list_box').css('width', 'calc(25% - 16px)');
-      }
-    if (w < 1368) {
-      $('.store_list_box').css('width', 'calc(33.33333% - 16px)');
-    }
-    if (w < 1026) {
-      $('.store_list_box').css('width', 'calc(50% - 16px)');
-    }
-    if (w < 684) {
-      $('.store_list_box').css('width', 'calc(100% - 16px)');
-    }
-  }
-
-});
-});
-
-
-</script>
 
 
 
@@ -221,7 +124,8 @@ $(function() {
     <div class="content_scroll_inner">
         <div class="store_list">
 
-            <div class="store_list_box flex_col_3 ds_box_1 hover_border shop_list_enabled">
+            <div class="store_list_box flex_col_3 ds_box_1 hover_border">
+                <div class="shop_list_enabled"></div>
                 <div class="ds_box_inner">
                     <div class="store_list_video_box">
                         <div class="store_list_video_box_inner">
@@ -244,7 +148,10 @@ $(function() {
                             </div>
                             </div>
                             </div>
-                            <div class="store_list_info_setting">
+                        </div>
+                    </div>
+                </div>
+                                 <div class="store_list_info_setting">
                                 <div class="simple_hover icon_btn store_list_info_volume">
                                 <img class="desvg" src="icon/volume_high.svg" alt="">
                                 </div>
@@ -272,10 +179,8 @@ $(function() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
             </div>
+
 
 
 

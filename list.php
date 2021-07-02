@@ -2,20 +2,7 @@
 
 <script>
 $(function() {
-$('.store_list_setting').click(function () {
-    $(this).next('.store_list_setting_modal').toggleClass('setting_modal_open');
-  });
 
-$('.toggle_staff_volume_off').click(function () {
-    $(this).toggleClass('toggle_staff_volume_on');
-  });
-
-$('.btn_list_page_right_mini_close').click(function () {
-    $('.list_page_flex').addClass('list_page_flex_right_mini');
-  });
-$('.btn_list_page_right_mini_open').click(function () {
-    $('.list_page_flex').removeClass('list_page_flex_right_mini');
-  });
 
 });
 </script>
@@ -430,88 +417,6 @@ $('.btn_list_page_right_mini_open').click(function () {
 
 </div>
 
-<script>
-$(function() {
-  var w = $('.list_page_flex_left').innerWidth();
-  var cnt = $(".store_list_box").length;
-  console.log(cnt);
-
-  if (cnt <= 1) {
-    $('.store_list_box').css('width', 'calc(100% - 16px)');
-
-  }
-  else if (cnt <= 2) {
-    $('.store_list_box').css('width', 'calc(50% - 16px)');
-    if (w < 684) {
-      $('.store_list_box').css('width', 'calc(100% - 16px)');
-    }
-  }
-  else if (cnt <= 3) {
-      $('.store_list_box').css('width', 'calc(33.3333% - 16px)');
-      if (w < 1026) {
-        $('.store_list_box').css('width', 'calc(50% - 16px)');
-      }
-      if (w < 684) {
-        $('.store_list_box').css('width', 'calc(100% - 16px)');
-      }
-    }
-  else {
-
-    if (w < 1368) {
-      $('.store_list_box').css('width', 'calc(33.33333% - 16px)');
-    }
-    if (w < 1026) {
-      $('.store_list_box').css('width', 'calc(50% - 16px)');
-    }
-    if (w < 684) {
-      $('.store_list_box').css('width', 'calc(100% - 16px)');
-    }
-  }
-
-  $(window).resize(function(){
-    var w = $('.list_page_flex_left').innerWidth();
-
-    if (cnt <= 1) {
-      $('.store_list_box').css('width', 'calc(100% - 16px)');
-
-    }
-    else if (cnt <= 2) {
-      $('.store_list_box').css('width', 'calc(50% - 16px)');
-      if (w < 684) {
-        $('.store_list_box').css('width', 'calc(100% - 16px)');
-      }
-    }
-    else if (cnt <= 3) {
-        $('.store_list_box').css('width', 'calc(33.3333% - 16px)');
-        if (w < 1026) {
-          $('.store_list_box').css('width', 'calc(50% - 16px)');
-        }
-        if (w < 684) {
-          $('.store_list_box').css('width', 'calc(100% - 16px)');
-        }
-      }
-      else {
-      if (w > 1368) {
-        $('.store_list_box').css('width', 'calc(25% - 16px)');
-      }
-    if (w < 1368) {
-      $('.store_list_box').css('width', 'calc(33.33333% - 16px)');
-    }
-    if (w < 1026) {
-      $('.store_list_box').css('width', 'calc(50% - 16px)');
-    }
-    if (w < 684) {
-      $('.store_list_box').css('width', 'calc(100% - 16px)');
-    }
-  }
-
-});
-});
-
-
-</script>
-
-
 
 <div class="list_page_flex_left">
 <div class="content_scroll">
@@ -546,8 +451,8 @@ $(function() {
                     </div>
                 </div>
                                  <div class="store_list_info_setting">
-                                <div class="simple_hover icon_btn store_list_info_volume">
-                                <img class="desvg" src="icon/volume_high.svg" alt="">
+                                <div class="simple_hover icon_btn store_list_info_volume btn_max">
+                                <img class="desvg" src="icon/volume_max.svg" alt="">
                                 </div>
 
                                 <div class="simple_hover icon_btn store_list_setting">
@@ -604,8 +509,8 @@ $(function() {
                             </div>
                             </div>
                             <div class="store_list_info_setting">
-                                <div class="simple_hover icon_btn store_list_info_volume">
-                                <img class="desvg" src="icon/volume_high.svg" alt="">
+                                <div class="simple_hover icon_btn store_list_info_volume btn_max">
+                                <img class="desvg" src="icon/volume_max.svg" alt="">
                                 </div>
 
                                 <div class="simple_hover icon_btn store_list_setting">
@@ -669,8 +574,8 @@ $(function() {
                             </div>
                             </div>
                             <div class="store_list_info_setting">
-                                <div class="simple_hover icon_btn store_list_info_volume">
-                                <img class="desvg volume" src="./icon/volume_high.svg" alt="">
+                                <div class="simple_hover icon_btn store_list_info_volume btn_max">
+                                <img class="desvg volume" src="./icon/volume_max.svg" alt="">
                                 </div>
 
                                 <div class="simple_hover icon_btn store_list_setting">
@@ -733,8 +638,8 @@ $(function() {
                             </div>
                             </div>
                             <div class="store_list_info_setting">
-                                <div class="simple_hover icon_btn store_list_info_volume">
-                                <img class="desvg volume" src="./icon/volume_high.svg" alt="">
+                                <div class="simple_hover icon_btn store_list_info_volume btn_max">
+                                <img class="desvg volume" src="./icon/volume_max.svg" alt="">
                                 </div>
 
                                 <div class="simple_hover icon_btn store_list_setting">
@@ -801,8 +706,8 @@ $(function() {
                             </div>
                             </div>
                             <div class="store_list_info_setting">
-                                <div class="simple_hover icon_btn store_list_info_volume">
-                                <img class="desvg volume" src="./icon/volume_high.svg" alt="">
+                                <div class="simple_hover icon_btn store_list_info_volume btn_max">
+                                <img class="desvg volume" src="./icon/volume_max.svg" alt="">
                                 </div>
 
                                 <div class="simple_hover icon_btn store_list_setting">
@@ -870,8 +775,8 @@ $(function() {
                             </div>
                             </div>
                             <div class="store_list_info_setting">
-                                <div class="simple_hover icon_btn store_list_info_volume">
-                                <img class="desvg volume" src="./icon/volume_high.svg" alt="">
+                                <div class="simple_hover icon_btn store_list_info_volume btn_max">
+                                <img class="desvg volume" src="./icon/volume_max.svg" alt="">
                                 </div>
 
                                 <div class="simple_hover icon_btn store_list_setting">
@@ -939,8 +844,8 @@ $(function() {
                             </div>
                             </div>
                             <div class="store_list_info_setting">
-                                <div class="simple_hover icon_btn store_list_info_volume">
-                                <img class="desvg volume" src="./icon/volume_high.svg" alt="">
+                                <div class="simple_hover icon_btn store_list_info_volume btn_max">
+                                <img class="desvg volume" src="./icon/volume_max.svg" alt="">
                                 </div>
 
                                 <div class="simple_hover icon_btn store_list_setting">
@@ -1014,8 +919,8 @@ $(function() {
                             </div>
                             </div>
                             <div class="store_list_info_setting">
-                                <div class="simple_hover icon_btn store_list_info_volume">
-                                <img class="desvg volume" src="./icon/volume_high.svg" alt="">
+                                <div class="simple_hover icon_btn store_list_info_volume btn_max">
+                                <img class="desvg volume" src="./icon/volume_max.svg" alt="">
                                 </div>
 
                                 <div class="simple_hover icon_btn store_list_setting">
@@ -1041,6 +946,251 @@ $(function() {
                                     </div>
                                 </div>
 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="store_list_box flex_col_3 ds_box_1 hover_border">
+                <div class="shop_list_enabled"></div>
+                <div class="ds_box_inner">
+                    <div class="store_list_video_box">
+                        <div class="store_list_video_box_inner">
+                            <img src="./img/store_min.png" alt="">
+                        </div>
+                    </div>
+                    <div class="store_list_info">
+                        <div class="store_list_info_store_name">
+                        <p class="headline_14">福山駅前本店</p>
+                        </div>
+                        <div class="store_list_info_under">
+                            <div class="store_list_info_status">
+                            <div class="store_list_info_status_box">
+                            <p class="small">トリープン</p>
+                            </div>
+                            <div class="store_list_info_status_box">
+                            <div class="icon_text icon_text_small">
+                                <img class="desvg" src="icon/android.svg" alt="">
+                                <p>android</p>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                 <div class="store_list_info_setting">
+                                <div class="simple_hover icon_btn store_list_info_volume btn_max">
+                                <img class="desvg" src="icon/volume_max.svg" alt="">
+                                </div>
+
+                                <div class="simple_hover icon_btn store_list_setting">
+                                <img class="desvg" src="icon/more.svg" alt="">
+                                </div>
+
+                                <div class="ds_box_1 setting_modal setting_modal_top_right store_list_setting_modal">
+                                    <div class="ds_box_inner setting_modal_inner">
+                                            <div class="setting_modal_btn_box">
+                                            <div class="setting_modal_inner_box">
+                                            <div class="icon_text simple_hover">
+                                            <img class="desvg" src="./icon/screensaver.svg" alt="">
+                                            <p>スクリーンセーバー起動</p>
+                                            </div>
+                                            </div>
+                                            <div class="setting_modal_inner_box">
+                                            <div class="icon_text simple_hover">
+                                            <img class="desvg" src="./icon/reload.svg" alt="">
+                                            <p>アプリ再起動</p>
+                                            </div>
+                                            </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+            </div>
+
+            <div class="store_list_box flex_col_3 ds_box_1 hover_border ">
+                                <div class="shop_list_enabled"></div>
+                <div class="ds_box_inner">
+                    <div class="store_list_video_box">
+                        <div class="store_list_video_box_inner">
+                            <img src="./img/store_min.png" alt="">
+                        </div>
+                    </div>
+                    <div class="store_list_info">
+                        <div class="store_list_info_store_name">
+                        <p class="headline_14">福山駅前本店</p>
+                        <div class="store_network_unstable icon_text icon_text_small">
+                        <img class="desvg" src="icon/wave_low.svg" alt="">
+                        <p>ネットワークが不安定</p>
+                        </div>
+                        </div>
+                        <div class="store_list_info_under">
+                            <div class="store_list_info_status">
+                            <div class="store_list_info_status_box">
+                            <p class="small">トリープン</p>
+                            </div>
+                            <div class="store_list_info_status_box">
+                            <div class="icon_text icon_text_small">
+                                <img class="desvg" src="icon/android.svg" alt="">
+                                <p>android</p>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="store_list_info_setting">
+                                <div class="simple_hover icon_btn store_list_info_volume btn_max">
+                                <img class="desvg" src="icon/volume_max.svg" alt="">
+                                </div>
+
+                                <div class="simple_hover icon_btn store_list_setting">
+                                <img class="desvg" src="icon/more.svg" alt="">
+                                </div>        <div class="ds_box_1 setting_modal setting_modal_top_right store_list_setting_modal">
+                                    <div class="ds_box_inner setting_modal_inner">
+                                            <div class="setting_modal_btn_box">
+                                            <div class="setting_modal_inner_box">
+                                            <div class="icon_text simple_hover">
+                                            <img class="desvg" src="./icon/screensaver.svg" alt="">
+                                            <p>スクリーンセーバー起動</p>
+                                            </div>
+                                            </div>
+                                            <div class="setting_modal_inner_box">
+                                            <div class="icon_text simple_hover">
+                                            <img class="desvg" src="./icon/reload.svg" alt="">
+                                            <p>アプリ再起動</p>
+                                            </div>
+                                            </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="store_list_box flex_col_3 ds_box_1 shop_list_current">
+                <div class="ds_box_inner">
+                    <div class="store_status_box">
+                    <div class="staff_name store_list_current_staff_name">
+                        <img class="staff_name_img store_list_current_staff_name_img" src="img/dog.png" alt="">
+                        <p>デモスタッフ</p>
+                    </div>
+                    <div class="store_list_current_status">
+                        <p>接客中</p>
+                    </div>
+                    </div>
+                    <div class="store_list_video_box">
+                        <div class="store_list_video_box_inner">
+                            <img src="./img/store_min.png" alt="">
+                            <div class="store_list_video_box_inner_overlay"></div>
+                        </div>
+                    </div>
+                    <div class="store_list_info">
+                        <div class="store_list_info_store_name">
+                        <p class="headline_14">福山駅前本店</p>
+                        </div>
+                        <div class="store_list_info_under">
+                            <div class="store_list_info_status">
+                            <div class="store_list_info_status_box">
+                            <p class="small">トリープン</p>
+                            </div>
+                            <div class="store_list_info_status_box">
+                            <div class="icon_text icon_text_small">
+                                <img class="desvg" src="./icon/android.svg" alt="">
+                                <p>android</p>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="store_list_info_setting">
+                                <div class="simple_hover icon_btn store_list_info_volume btn_max">
+                                <img class="desvg volume" src="./icon/volume_max.svg" alt="">
+                                </div>
+
+                                <div class="simple_hover icon_btn store_list_setting">
+                                <img class="desvg" src="./icon/more.svg" alt="">
+                                </div>        <div class="ds_box_1 setting_modal setting_modal_top_right store_list_setting_modal">
+                                    <div class="ds_box_inner setting_modal_inner">
+                                            <div class="setting_modal_btn_box">
+                                            <div class="setting_modal_inner_box">
+                                            <div class="icon_text simple_hover">
+                                            <img class="desvg" src="./icon/screensaver.svg" alt="">
+                                            <p>スクリーンセーバー起動</p>
+                                            </div>
+                                            </div>
+                                            <div class="setting_modal_inner_box">
+                                            <div class="icon_text simple_hover">
+                                            <img class="desvg" src="./icon/reload.svg" alt="">
+                                            <p>アプリ再起動</p>
+                                            </div>
+                                            </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="store_list_box flex_col_3 ds_box_1 shop_list_current">
+                <div class="ds_box_inner">
+                    <div class="store_status_box">
+                    <div class="staff_name store_list_current_staff_name">
+                        <img class="staff_name_img store_list_current_staff_name_img" src="img/dog.png" alt="">
+                        <p>デモスタッフ</p>
+                    </div>
+                    <div class="store_list_current_status">
+                        <p>接客戻り中</p>
+                    </div>
+                    </div>
+                    <div class="store_list_video_box">
+                        <div class="store_list_video_box_inner">
+                            <img src="./img/store_min.png" alt="">
+                            <div class="store_list_video_box_inner_overlay"></div>
+                        </div>
+                    </div>
+                    <div class="store_list_info">
+                        <div class="store_list_info_store_name">
+                        <p class="headline_14">福山駅前本店</p>
+                        </div>
+                        <div class="store_list_info_under">
+                            <div class="store_list_info_status">
+                            <div class="store_list_info_status_box">
+                            <p class="small">トリープン</p>
+                            </div>
+                            <div class="store_list_info_status_box">
+                            <div class="icon_text icon_text_small">
+                                <img class="desvg" src="./icon/android.svg" alt="">
+                                <p>android</p>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="store_list_info_setting">
+                                <div class="simple_hover icon_btn store_list_info_volume btn_max">
+                                <img class="desvg volume" src="./icon/volume_max.svg" alt="">
+                                </div>
+
+                                <div class="simple_hover icon_btn store_list_setting">
+                                <img class="desvg" src="./icon/more.svg" alt="">
+                                </div>        <div class="ds_box_1 setting_modal setting_modal_top_right store_list_setting_modal">
+                                    <div class="ds_box_inner setting_modal_inner">
+                                            <div class="setting_modal_btn_box">
+                                            <div class="setting_modal_inner_box">
+                                            <div class="icon_text simple_hover">
+                                            <img class="desvg" src="./icon/screensaver.svg" alt="">
+                                            <p>スクリーンセーバー起動</p>
+                                            </div>
+                                            </div>
+                                            <div class="setting_modal_inner_box">
+                                            <div class="icon_text simple_hover">
+                                            <img class="desvg" src="./icon/reload.svg" alt="">
+                                            <p>アプリ再起動</p>
+                                            </div>
+                                            </div>
+                                    </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -104,9 +104,11 @@
 <img class="desvg" src="icon/volume_high.svg" alt="">
 <p>入力レベル</p>
 </div>
-<div class="modal_setting_border_box_content">
+<div class="modal_setting_border_box_content modal_setting_border_box_content_flex">
 <button class="btn btn_small btn_border btn_play_test"><img class="desvg" src="icon/volume_high.svg" alt="">
 テスト開始</button>
+<?php include('./bar_a.php'); ?>
+
 </div>
 </div>
 
@@ -115,11 +117,17 @@
 <img class="desvg" src="icon/play.svg" alt="">
 <p>録音テスト</p>
 </div>
-<div class="modal_setting_border_box_content">
+<div class="modal_setting_border_box_content modal_setting_border_box_content_flex">
 <button class="btn btn_small btn_border btn_play_recording"><img class="desvg" src="icon/play.svg" alt="">
 録音開始</button>
-<p class="small">※録音した音声は保存されません</p>
+<audio controls>
+<source src="sample.mp3" type="audio/mp3">
+<source src="sample.ogg" type="audio/ogg">
+<source src="sample.wav" type="audio/wav">
+<p>※ご利用のブラウザでは再生することができません。</p>
+</audio>
 </div>
+<p class="small mt_10">※録音した音声は保存されません</p>
 </div>
 
 

@@ -11,106 +11,8 @@
   <link rel="stylesheet" href="./style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/desvg@1.0.2/desvg.min.js"></script>
-<script>
+<script type="text/javascript" src="rura_mockup.js"></script>
 
-
-$(function() {
-
-var header_btn_other_witdh = $('.header_btn_other').innerWidth();
-var header_device_setting_btn_right = header_btn_other_witdh + 20;
-$('.header_device_setting_btn').css('right',header_device_setting_btn_right)
-
-
-$('select[name=page_link]').change(function() {
-if ($(this).val() != '') {
-window.location.href = $(this).val();
-}
-});
-
-$('.shop_list_enabled').click(function(){
-window.location.href = 'room.php';
-});
-
-var li_cnt = $("ul.list_staff li").length;
-console.log(li_cnt);
-$('.staff_number').html(li_cnt);
-
-$('.btn_device_setting').click(function(){
-  $('.modal_device_setting').fadeIn(150);
-  $('.modal_ovarlay').fadeIn(150);
-  var setting_preview_display_height = $('.setting_preview_display').innerHeight();
-console.log(setting_preview_display_height);
-$('.modal_device_setting_left_photo_scroll').css('height',setting_preview_display_height);
-
-});
-$('.modal_close_btn').click(function(){
-  $('.modal_device_setting').fadeOut(150);
-  $('.modal_ovarlay').fadeOut(150);
-});
-$('.modal_ovarlay').click(function(){
-  $('.modal_device_setting').fadeOut(150);
-  $('.modal_ovarlay').fadeOut(150);
-});
-
-$('.btn_user_setting').click(function(){
-  $('.modal_user_setting').fadeIn(150);
-  $('.modal_ovarlay_2').fadeIn(150);
-});
-$('.modal_close_btn').click(function(){
-  $('.modal_user_setting').fadeOut(150);
-  $('.modal_ovarlay_2').fadeOut(150);
-});
-$('.modal_ovarlay_2').click(function(){
-  $('.modal_user_setting').fadeOut(150);
-  $('.modal_ovarlay_2').fadeOut(150);
-});
-
-
-$('.bg_color_select').click(function(){
-$(this).addClass("active");
-$(".bg_color_select").not(this).removeClass("active");
-});
-
-
-
-  $('.btn_play_recording').click(function(){
-    $(this).toggleClass("btn_stop");
-		if($(this).hasClass('btn_stop') == false){
-    $(this).html('<img class="desvg" src="icon/play.svg">録音開始');
-          deSVG('.desvg', true);
-		}else{
-    $(this).html('<img class="desvg" src="icon/stop.svg">録音終了');
-      deSVG('.desvg', true);
-		}
-	});
-  $('.btn_play_test').click(function(){
-    $(this).toggleClass("btn_stop");
-		if($(this).hasClass('btn_stop') == false){
-        $(this).html('<img class="desvg" src="icon/volume_high.svg">テスト開始');
-          deSVG('.desvg', true);
-		}else{
-    $(this).html('<img class="desvg" src="icon/stop.svg">テスト終了');
-      deSVG('.desvg', true);
-		}
-	});
-
-
-
-
-$(window).resize(function(){
-var setting_preview_display_height = $('.setting_preview_display').innerHeight();
-console.log(setting_preview_display_height);
-$('.modal_device_setting_left_photo_scroll').css('height',setting_preview_display_height);
-});
-
-window.addEventListener('load', function(){
-  deSVG('.desvg', true);
-});
-
-});
-
-
-</script>
 
 
 </head>
@@ -159,16 +61,17 @@ window.addEventListener('load', function(){
 <img class="desvg" src="icon/error-01.svg" alt="">
 <p>サーバーに問題が発生しています</p></div>
 
-<button class="icon_text simple_hover btn_help icon_alert">
-<img class="desvg" src="icon/help.svg" alt="">
-</button>
-
   <div class="modal_ovarlay"></div>
 <button class="icon_text simple_hover btn_device_setting">
 <img class="desvg" src="icon/setting.svg" alt="">
 <p>デバイス設定</p>
 </button>
 <?php include('./modal_device_setting.php'); ?>
+
+<button class="icon_text simple_hover btn_help icon_alert">
+<img class="desvg" src="icon/help.svg" alt="">
+</button>
+
 </div>
 
 
